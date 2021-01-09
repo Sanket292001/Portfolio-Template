@@ -167,26 +167,26 @@ nav ul li a {
   transform: scale(1.2);
 }
 
-/* Gallery Section */
+/* project Section */
 
-.gallery-container {
+.project-container {
   width: 100%;
   padding: 5%;
   margin-top: -2%;
 }
 
-.gallery-heading {
+.project-heading {
   font-size: 40px;
   margin: 0% 0% 3% 0%;
 }
 
-.gallery {
+.project {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
 }
 
-.gallery-image {
+.project-image {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -194,14 +194,14 @@ nav ul li a {
   /* box-shadow ease-in-out 0.3s, transform */
 }
 
-.gallery-image img {
+.project-image img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
   animation: animation 0.8s;
 }
 
-.gallery-image:hover {
+.project-image:hover {
   transform: translateY(-8px);
   box-shadow: 0px 5px 5px 1px rgb(139, 132, 132);
 }
