@@ -2,6 +2,13 @@ const projectCounter = document.getElementById("project-counter");
 const followersCounter = document.getElementById("followers-counter");
 const subscriptionsCounter = document.getElementById("subscriptions-counter");
 const repositoriesCounter = document.getElementById("repositories-counter");
+
+// Sidenav
+const hamburgerLogo = document.querySelector(".hamburger-logo");
+const sidenav = document.querySelector(".side-nav");
+const sidenavButton = document.querySelector(".sidenav-close-button");
+let sidenavToggle = false;
+
 var cnt = 0,
   followersCnt = 0,
   subsCnt = 0;
@@ -26,4 +33,30 @@ setInterval(() => {
 
 window.addEventListener("scroll", (e) => {
   console.log(window.pageYOffset + " ; " + window.scrollY);
+});
+
+hamburgerLogo.addEventListener("click", () => {
+  if (sidenavToggle) {
+    if (sidenav.classList.contains("open-side-nav")) {
+      sidenav.classList.remove("open-side-nav");
+    }
+    sidenav.classList.add("close-side-nav");
+    sidenavToggle = false;
+  } else {
+    if (sidenav.classList.contains("close-side-nav")) {
+      sidenav.classList.remove("close-side-nav");
+    }
+    sidenav.classList.add("open-side-nav");
+    sidenavToggle = true;
+  }
+});
+
+sidenavButton.addEventListener("click", () => {
+  if (sidenavToggle) {
+    if (sidenav.classList.contains("open-side-nav")) {
+      sidenav.classList.remove("open-side-nav");
+    }
+    sidenav.classList.add("close-side-nav");
+    sidenavToggle = false;
+  }
 });

@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./index.css" />
   </head>
@@ -14,11 +21,26 @@
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="#About">About</a></li>
-          <li><a href="#Gallery">Projects</a></li>
+          <li><a href="#Project">Projects</a></li>
           <li><a href="#Contact">Contact Us</a></li>
         </ul>
+        <div class="hamburger-logo">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
       <div class="header-contents"><p>Header Contents</p></div>
+    </div>
+    <!-- Sidenav -->
+    <div class="side-nav">
+      <ul>
+        <li class="close-btn">
+          <i class="fas fa-times sidenav-close-button"></i>
+        </li>
+        <a href="./index.html"><li>Home</li></a>
+        <a href="#About"><li>About</li></a>
+        <a href="#Project"><li>Projects</li></a>
+        <a href="#Contact"><li>Contact Us</li></a>
+      </ul>
     </div>
     <div class="page">
       <!-- Counter -->
@@ -60,7 +82,7 @@
           </div>
         </div>
       </div>
-      <a id="project"></a>
+      <a id="Project"></a>
       <!-- project -->
       <div class="project-container">
         <div class="project-heading">Projects</div>
