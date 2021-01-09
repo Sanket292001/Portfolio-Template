@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jaldi", sans-serif;
+  transition: all 0.4s ease;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 76vh;
+  top: 0;
+  position: fixed;
+  background-color: rgb(10, 125, 192);
+  z-index: 1;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0% 30px 0% 30px;
+  justify-content: space-between;
+}
+
+nav p {
+  font-size: 40px;
+  font-family: "playball", "Freestyle Script";
+}
+
+nav ul {
+  list-style-type: none;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+.header-contents {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-contents p {
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+
+/* Page */
+.page {
+  width: 100%;
+  position: relative;
+  margin-top: 76vh;
+  margin-bottom: 27vh;
+  text-align: center;
+  background-color: #f1f1f1;
+  z-index: 3;
+}
+
+/* Counters Section */
+.counters-container {
+  width: 80%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px 0px #b8b8b8;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 15px;
+}
+
+.project-counter-container,
+.followers-counter-container,
+.subscriptions-counter-container,
+.repositories-counter-container {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-counter-container h1,
+.followers-counter-container h1,
+.subscriptions-counter-container h1,
+.repositories-counter-container h1 {
+  font-size: 40px;
+  width: 100%;
+}
+.project-counter-container p,
+.followers-counter-container p,
+.subscriptions-counter-container p,
+.repositories-counter-container p {
+  font-size: 25px;
+  width: 100%;
+}
+
+/* About Section */
+.about-container {
+  position: relative;
+  text-align: center;
+  margin-top: -50px;
+  width: 100%;
+}
+
+.about-heading {
+  font-size: 40px;
+  margin: -1% 0% 3% 0%;
+}
+
+.about {
+  width: 90%;
+  margin: auto auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.about-contents {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  text-align: justify;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform ease-in-out 0.4s;
+}
+
+.about-image:hover img {
+  transform: scale(1.2);
+}
+
+/* Gallery Section */
+
+.gallery-container {
+  width: 100%;
+  padding: 5%;
+  margin-top: -2%;
+}
+
+.gallery-heading {
+  font-size: 40px;
+  margin: 0% 0% 3% 0%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all ease-in-out 0.4s;
+  /* box-shadow ease-in-out 0.3s, transform */
+}
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  animation: animation 0.8s;
+}
+
+.gallery-image:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 5px 5px 1px rgb(139, 132, 132);
+}
+
+/* Footer */
+
+.footer {
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 24%;
+  bottom: 0;
+  background-color: rgb(10, 125, 192);
+}
+
+.footer-content {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-family: "playball", "Freestyle Script";
+  color: #fff;
+}
+
+.footer-content span {
+  font-size: 18px;
+}
+
+.footer-border {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.281);
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .counters-container {
+    width: 70%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    transform: translate(-50%, -31.4%);
+  }
+
+  .project-counter-container,
+  .followers-counter-container,
+  .subscriptions-counter-container,
+  .repositories-counter-container {
+    height: 175px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .about-heading {
+    font-size: 40px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  nav ul {
+    width: 0px;
+    overflow: hidden;
+  }
+
+  .counters-container {
+    width: 85%;
+    transform: translate(-50%, -36.8%);
+  }
+
+  .project-counter-container,
+  .followers-counter-container,
+  .subscriptions-counter-container,
+  .repositories-counter-container {
+    height: 150px;
+  }
+  .project-counter-container h1,
+  .followers-counter-container h1,
+  .subscriptions-counter-container h1,
+  .repositories-counter-container h1 {
+    font-size: 35px;
+  }
+
+  .project-counter-container p,
+  .followers-counter-container p,
+  .subscriptions-counter-container p,
+  .repositories-counter-container p {
+    font-size: 23px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header-contents p {
+    font-size: 30px;
+  }
+  .counters-container {
+    transform: translate(-50%, -19.3%);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+    width: 85%;
+  }
+  .project-counter-container h1,
+  .followers-counter-container h1,
+  .subscriptions-counter-container h1,
+  .repositories-counter-container h1 {
+    font-size: 35px;
+  }
+
+  .project-counter-container p,
+  .followers-counter-container p,
+  .subscriptions-counter-container p,
+  .repositories-counter-container p {
+    font-size: 23px;
+  }
+  .about {
+    grid-template-rows: 1.5fr 1fr;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .about {
+    grid-template-rows: 1.8fr 1fr;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .header-contents p {
+    margin-top: -5%;
+  }
+  .counters-container {
+    transform: translate(-50%, -30%);
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .header-contents p {
+    margin-top: -8%;
+  }
+  .counters-container {
+    transform: translate(-50%, -25%);
+  }
+}
+@media screen and (max-height: 400px) {
+  .header-contents p {
+    margin-top: -11%;
+    font-size: 28px;
+  }
+  .counters-container {
+    transform: translate(-50%, -20%);
+  }
+}
+@media screen and (max-height: 350px) {
+  .header-contents p {
+    margin-top: -13%;
+    font-size: 25px;
+  }
+  .counters-container {
+    transform: translate(-50%, -15%);
+  }
+}
